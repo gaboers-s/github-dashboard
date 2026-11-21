@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img id="avatar" class="avatar" src="" alt="" aria-hidden="true">
+                <span id="username" class="username">octocat</span>
+            </div>
+            <h1 class="title">GitHub Dashboard</h1>
+            <form id="search-form" class="search-form" role="search">
+                <label for="search" class="visually-hidden">Search username</label>
+                <input id="search" type="search" name="q" placeholder="Search username" autocomplete="off">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <main class="container">
+        <p id="status" class="status" aria-live="polite"></p>
+
+        <section class="stats" aria-label="Profile statistics">
+            <article class="card stat-card">
+                <p class="stat-label">Repositories</p>
+                <p id="stat-repos" class="stat-value">-</p>
+                <p class="stat-meta">Public projects</p>
+            </article>
+            <article class="card stat-card">
+                <p class="stat-label">Stars</p>
+                <p id="stat-stars" class="stat-value">-</p>
+                <p class="stat-meta">Total stars earned</p>
+            </article>
+            <article class="card stat-card">
+                <p class="stat-label">Followers</p>
+                <p id="stat-followers" class="stat-value">-</p>
+                <p class="stat-meta">People following</p>
+            </article>
+            <article class="card stat-card">
+                <p class="stat-label">Following</p>
+                <p id="stat-following" class="stat-value">-</p>
+                <p class="stat-meta">Accounts followed</p>
+            </article>
+        </section>
+
+        <section class="overview" aria-label="Overview">
+            <article class="card panel contributions-panel">
+                <div class="panel-header">
+                    <div>
+                        <h2 class="panel-title">Contributions</h2>
+                        <p id="contrib-total" class="muted"></p>
+                    </div>
+                    <div id="contrib-years" class="contrib-years" aria-label="Contribution year"></div>
+                </div>
+                <div id="contributions" class="contributions">
+                    <p class="muted">Loading contributions...</p>
+                </div>
+                <div class="contrib-legend muted">
+                    <span>Less</span>
+                    <span class="legend-cell level-0"></span>
+                    <span class="legend-cell level-1"></span>
+                    <span class="legend-cell level-2"></span>
+                    <span class="legend-cell level-3"></span>
+                    <span class="legend-cell level-4"></span>
+                    <span>More</span>
+                </div>
+            </article>
+            <article class="card panel">
+                <h2 class="panel-title">Top Languages</h2>
+                <ul id="language-list" class="language-list">
+                    <li class="muted">No data</li>
+                </ul>
+            </article>
+        </section>
+
+        <section aria-label="Repositories">
+            <div class="section-header">
+                <h2>Repositories</h2>
+            </div>
+            <div id="repo-grid" class="repo-grid">
+                <p class="muted">No repositories loaded.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
